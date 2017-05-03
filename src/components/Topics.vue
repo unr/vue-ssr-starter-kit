@@ -1,26 +1,23 @@
 <template>
-  <div>
-    <div v-for="topic in topics">
-      <p>{{topic.title}}</p>
-    </div>
-  </div>
+	<div>
+		<div v-for="topic in topics"><p>{{topic.title}}</p></div>
+	</div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 
-const fetchInitialData = store => {
-  return store.dispatch(`getTopics`)
-}
+const fetchInitialData = store => store.dispatch('getTopics');
+
 export default {
-  prefetch: fetchInitialData,
-  computed: {
-    ...mapGetters({
-      topics: 'getTopics'
-    })
-  },
-  mounted () {
-    fetchInitialData(this.$store)
-  }
-}
+	prefetch: fetchInitialData,
+	computed: {
+		...mapGetters({
+			topics: 'getTopics',
+		}),
+	},
+	mounted() {
+		fetchInitialData(this.$store);
+	},
+};
 </script>

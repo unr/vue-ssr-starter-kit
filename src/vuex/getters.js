@@ -1,2 +1,3 @@
-export const getTopics = state => state.topics
-export const getCount = state => state.count
+// unsure of purpose of this being so abstracted....
+export const getTopics = state => state.topics;
+export const getCount = state => state.count;
