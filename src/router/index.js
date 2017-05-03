@@ -2,10 +2,10 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 // our routing components
-import Home from '../components/Home.vue';
-import About from '../components/About.vue';
-import Counter from '../components/Counter.vue';
-import Topics from '../components/Topics.vue';
+import Home from './Home.vue';
+import About from './About.vue';
+import Counter from './Counter.vue';
+import Topics from './Topics.vue';
 
 Vue.use(VueRouter);
 
